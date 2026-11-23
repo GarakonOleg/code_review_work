@@ -6,32 +6,37 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
     private Calculator calculator;
+    int actual = 0;
+    int a = 0;
+    int b = 0;
 
-    @BeforeEach
-    void setUp(){calculator = new Calculator();}
 
     @Test
     void add() {
-        assertEquals(5, calculator.add(2, 3));
+        actual = calculator.add(5,2);
+        assertEquals(7, actual);
     }
 
     @Test
     void dif() {
-        assertEquals(-2, calculator.dif(3, 5));
+        actual = calculator.dif(5,2);
+        assertEquals(3, actual);
     }
 
     @Test
     void div() {
-        assertEquals(2, calculator.div(10, 5));
+        actual = calculator.div(8,2);
+        assertEquals(4, actual);
     }
 
     @Test
     void times() {
-        assertEquals(12, calculator.times(3, 4));
+        actual = calculator.times(5,2);
+        assertEquals(10, actual);
     }
 
     @Test
     void solver() {
-        assertEquals(3, calculator.solver());
+        assertEquals(50, calculator.solver());
     }
 }
